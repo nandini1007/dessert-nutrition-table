@@ -1,11 +1,14 @@
 import React, { ReactNode } from 'react';
 import PropTypes from 'prop-types';
 import classList from './classList';
+import './index.css';
 
 interface ButtonPropTypes {
   children: ReactNode,
   type?: string,
   className?: string,
+  disabled?: boolean,
+  onClick?: any,
 };
 
 function Button({ type = 'primary', className = '', children, ...props }:ButtonPropTypes ) {

@@ -1,5 +1,3 @@
-import classes from "*.module.css";
-
 const classList = {
     container: "center w-90 bg-lightest-blue mt5 pa4 tc",
     appTitleBar: 'flex justify-between',

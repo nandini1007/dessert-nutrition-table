@@ -1,11 +1,51 @@
 import React from 'react';
+import _ from 'lodash';
+import './index.css';
+import AppContext from '../../context/AppContext';
 
-function Table() {
+interface TableRowProps {
+  columns: any[],
+  data: any,
+  toggleSelection: any,
+  selectedItemsMap: any
+  selectedItems: any
+};
+
+function TableRow({ columns, data, selectedItemsMap, toggleSelection }: TableRowProps) {
   return (
-    <div className="App">
-      <a className="f6 link dim br1 ba bw2 ph3 pv2 mb2 dib black" href="#0">Table</a>
+    <div className="flex table-tr">
+      {
+        columns.map(item => (
+          <div key={item.key} className={`table-td ${item.className}`}>
+            {
+              item.type === 'checkbox' ?
+              <input
+                type="checkbox"
+                checked={selectedItemsMap[data.id]}
+                onChange={() => {
+                  toggleSelection(data);
+                }}
+              />
+              :
+              _.get(data, item.key)
+            }
+          </div>
+        ))
+      }
     </div>
   );
 }
 
-export default Table;
+export default (props:any) => (
+  <AppContext.Consumer>
+    {
+      ({ toggleSelection, selectedItemsMap, selectedItems }) => (
+        <TableRow
+          toggleSelection={toggleSelection}
+          selectedItemsMap={selectedItemsMap}
+          {...props}
+        />
+      )
+    }
+  </AppContext.Consumer>
+);
