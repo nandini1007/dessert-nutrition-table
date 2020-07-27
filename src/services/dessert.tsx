@@ -8,7 +8,7 @@ export const addDessert = (data) => {
                     calories: data.calories,
                     fat: data.fat,
                     carb: data.carb,
-                    protein: data.protien
+                    protein: data.protein
                 }
             }
             response.id = Math.random();

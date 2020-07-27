@@ -17,19 +17,19 @@ const columns = [{
     sortable: true
   }, {
     type: 'text',
-    name: 'Fat',
+    name: 'Fat(g)',
     key: 'nutritionInfo.fat',
     className: 'pa3 cell-fat',
     sortable: true
   }, {
     type: 'text',
-    name: 'Carbs',
+    name: 'Carbs(g)',
     key: 'nutritionInfo.carb',
     className: 'pa3 cell-carb',
     sortable: true
   }, {
     type: 'text',
-    name: 'Protiene',
+    name: 'Protein(g)',
     key: 'nutritionInfo.protein',
     className: 'pa3 cell-protein',
     sortable: true

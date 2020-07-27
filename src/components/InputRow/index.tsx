@@ -7,14 +7,16 @@ interface InputRowPropTypes {
   onChange?: any,
   label?: any,
   value?: any,
-  name?: string
+  name?: string,
+  type?: string
 };
 
-function InputRow({ onChange, label, value, name  }:InputRowPropTypes ) {
+function InputRow({ onChange, type, label, value, name  }:InputRowPropTypes ) {
   return (
     <div className="mt3">
       <label className="db fw6 lh-copy f6">{label}</label>
       <input
+        type={type}
         value={value}
         name={name}
         onChange={(e) => {

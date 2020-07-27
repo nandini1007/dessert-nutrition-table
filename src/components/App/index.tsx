@@ -5,6 +5,7 @@ import classList from './classList';
 import Button from '../Button';
 import AppContext from '../../context/AppContext';
 import Modal from '../Modal';
+import data from './data';
 import CreateForm from '../CreateForm';
 import { addDessert, deleteDessert } from "../../services/dessert";
 
@@ -14,7 +15,7 @@ class App extends Component<any, any> {
     this.state = {
       sortConfig: null,
       selectedItems: [],
-      data: [],
+      data,
       selectedItemsMap: {},
       setSortConfig: this.setSortConfig,
       toggleSelection: this.toggleSelection,
@@ -27,7 +28,7 @@ class App extends Component<any, any> {
   componentDidMount() {
     let res = []
     try {
-      res = JSON.parse(localStorage.getItem('data'));
+      res = JSON.parse(localStorage.getItem('data')) || data;
     } catch(e) {
       console.log(e)
     }
@@ -73,6 +74,7 @@ class App extends Component<any, any> {
       sortConfig: null,
       selectedItems: [],
       selectedItemsMap: {},
+      isAllSelected: false,
     });
   }
 

@@ -15,7 +15,7 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
   const [ calories, setCalories ] = useState('');
   const [ fat, setFat ] = useState('');
   const [ carb, setCarb ] = useState('');
-  const [ protien, setProtien ] = useState('');
+  const [ protein, setProtein ] = useState('');
   return (
     <div className={classList.createForm}>
       <div className="mt2 ">
@@ -32,6 +32,7 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
         name="calories"
         label="Calories *"
         onChange={setCalories}
+        type="number"
       />
       <InputRow
         value={fat}
@@ -44,17 +45,19 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
         name="carb"
         label="Carbs *"
         onChange={setCarb}
+        type="number"
       />
       <InputRow
-        value={protien}
-        name="protien"
-        label="Protien *"
-        onChange={setProtien}
+        value={protein}
+        name="protein"
+        label="Protein *"
+        onChange={setProtein}
+        type="number"
       />
       <Button
         className="mt3"
         disabled={
-          !name || !calories || !fat || !carb || !protien
+          !name || !calories || !fat || !carb || !protein
         }
         onClick={() => {
           onCreate({
@@ -62,7 +65,7 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
             calories,
             carb,
             fat,
-            protien,
+            protein,
           })
         }}
       >
