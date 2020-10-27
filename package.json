@@ -13,6 +13,7 @@
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "classnames": "^2.2.6",
+    "cypress": "^5.4.0",
     "lodash": "^4.17.19",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
