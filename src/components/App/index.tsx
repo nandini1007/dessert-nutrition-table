@@ -151,20 +151,21 @@ class App extends Component<any, any> {
         <div className={classList.container}>
             <div className={classList.appTitleBar}>
               <div className={classList.appTitle}>Nutrition List</div>
-              { !!data.length && <Button onClick={this.handleReset} disabled={!(sortConfig || selectedItems.length !== 0)}>Reset</Button> }
+              { !!data.length && <Button onClick={this.handleReset} disabled={!(sortConfig || selectedItems.length !== 0)}>RESET DATA</Button> }
             </div>
             {
               !!data.length && (
               <div className={classList.featureButtonWrapper}>
                 <div>
-                  Select
+
                   {
-                    !!selectedItems.length && <span>({selectedItems.length})</span>
+                    !!selectedItems.length && <span>{selectedItems.length} </span>
                   }
+                  Selected
                 </div>
                 <div>
-                  <Button onClick={this.openCreateForm}>Add New</Button>
-                  <Button onClick={this.handleDelete} disabled={!selectedItems.length} className="ml3">Delete</Button>
+                  <Button onClick={this.openCreateForm}>ADD NEW</Button>
+                  <Button onClick={this.handleDelete} disabled={!selectedItems.length} className="ml3">DELETE</Button>
                 </div>
               </div>
               )

@@ -19,12 +19,12 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
   return (
     <div className={classList.createForm}>
       <div className="mt2 ">
-        Please fill all Fields
+        Please fill all details before you submit
       </div>
       <InputRow
         value={name}
         name="dessert"
-        label="Dessert *"
+        label="Dessert Name *"
         onChange={setName}
       />
       <InputRow
@@ -69,7 +69,7 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
           })
         }}
       >
-        Create
+        Submit
       </Button>
     </div>
   )
