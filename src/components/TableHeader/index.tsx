@@ -53,7 +53,7 @@ function TableHeader({ columns, sortConfig, setSortConfig, isAllSelected, toggle
 export default (props:any) => (
   <AppContext.Consumer>
     {
-      ({ sortConfig, setSortConfig, isAllSelected, toggleAllSelection }) => 
+      ({ sortConfig, setSortConfig, isAllSelected, toggleAllSelection }) =>
       <TableHeader
         sortConfig={sortConfig}
         setSortConfig={setSortConfig}

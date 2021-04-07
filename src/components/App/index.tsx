@@ -189,7 +189,7 @@ class App extends Component<any, any> {
         </div>
       </AppContext.Provider>
     );
-  } 
+  }
 }
 
 export default App;

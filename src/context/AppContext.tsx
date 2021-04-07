@@ -22,4 +22,3 @@ const AppContext = React.createContext<Partial<AppContextValues>>({
 });
 
 export default AppContext;
-  

@@ -78,7 +78,7 @@ const CreateForm = ({ onCreate }: CreateFormProps) => {
 export default (props:any) => (
   <AppContext.Consumer>
     {
-      ({ onCreate }) => 
+      ({ onCreate }) =>
       <CreateForm
         onCreate={onCreate}
         {...props} />
